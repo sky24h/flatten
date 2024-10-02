@@ -158,14 +158,14 @@ def neighbors_index(point, window_size, H, W):
 
 
 @torch.no_grad()
-def sample_trajectories(video_path, device):
+def sample_trajectories(frames, device):
     from torchvision.models.optical_flow import Raft_Large_Weights
     from torchvision.models.optical_flow import raft_large
 
     weights = Raft_Large_Weights.DEFAULT
     transforms = weights.transforms()
 
-    frames, _, _ = torchvision.io.read_video(str(video_path), output_format="TCHW")
+    # frames, _, _ = torchvision.io.read_video(str(video_path), output_format="TCHW")
 
     clips = list(range(len(frames)))
 

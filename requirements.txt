@@ -1,0 +1,15 @@
+torch==2.1.1 # if you encounter CUDA verision mismatches error, try to install torch manually to specify the version that matches your cuda version
+torchvision==0.16.1
+xformers==0.0.23
+accelerate==0.24.1
+diffusers==0.19.0
+transformers==4.35.0
+imageio==2.34.2
+numpy==1.23.5
+imageio-ffmpeg==0.5.1
+opencv-python==4.8.0.76
+fastapi==0.111.0
+huggingface-hub
+einops
+decord
+av

@@ -1,3 +1,27 @@
+### This is a forked version with minor modifications
+---
+
+Environment setup:
+
+First you can download Stable Diffusion 2.1 **(base)** [here](https://huggingface.co/stabilityai/stable-diffusion-2-1-base).
+
+then install the necessary package.
+```bash
+pip install -r requirements.txt
+```
+
+Gradio demo:
+```bash
+python gradio_demo.py
+```
+
+Online demo:
+
+https://huggingface.co/spaces/sky24h/FLATTEN-unofficial
+
+Original README:
+---
+
 # FLATTEN: optical FLow-guided ATTENtion for consistent text-to-video editing
 [![arXiv](https://img.shields.io/badge/arXiv-2310.05922-b31b1b.svg)](https://arxiv.org/abs/2310.05922)
 [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://flatten-video-editing.github.io/) 
