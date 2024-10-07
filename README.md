@@ -10,12 +10,17 @@ then install the necessary package.
 pip install -r requirements.txt
 ```
 
+Simple Inference:
+```bash
+python inference.py
+```
+
 Gradio demo:
 ```bash
 python gradio_demo.py
 ```
 
-Online demo:
+Online Demo:
 
 https://huggingface.co/spaces/sky24h/FLATTEN-unofficial
 
