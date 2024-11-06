@@ -15,10 +15,10 @@ from models.unet import UNet3DConditionModel
 
 def init_pipeline(device, sd_path="checkpoints/stable-diffusion-2-1-base"):
     dtype        = torch.float16
-    unet         = UNet3DConditionModel.from_pretrained_2d(sd_path, subfolder="unet").to(dtype=torch.float16)
-    vae          = AutoencoderKL.from_pretrained(sd_path, subfolder="vae").to(dtype=torch.float16)
+    unet         = UNet3DConditionModel.from_pretrained_2d(sd_path, subfolder="unet").to(dtype=dtype)
+    vae          = AutoencoderKL.from_pretrained(sd_path, subfolder="vae").to(dtype=dtype)
     tokenizer    = CLIPTokenizer.from_pretrained(sd_path, subfolder="tokenizer", dtype=dtype)
-    text_encoder = CLIPTextModel.from_pretrained(sd_path, subfolder="text_encoder").to(dtype=torch.float16)
+    text_encoder = CLIPTextModel.from_pretrained(sd_path, subfolder="text_encoder").to(dtype=dtype)
     scheduler    = DDIMScheduler.from_pretrained(sd_path, subfolder="scheduler")
     inverse      = DDIMInverseScheduler.from_pretrained(sd_path, subfolder="scheduler")
 
